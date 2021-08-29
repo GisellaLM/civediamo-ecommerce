@@ -38,14 +38,12 @@ export default function TemporaryDrawer() {
     right: false,
   });
 
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
+  const peep = (tamaño, open) => {
+    const px = (event) => {};
+    return px;
+  };
 
+  const toggleDrawer = (anchor, open) => (event) => {
     setState({ ...state, [anchor]: open });
   };
 
@@ -56,7 +54,6 @@ export default function TemporaryDrawer() {
       })}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
         {["About us", "Services", "Contact us", "Reservation"].map(
@@ -96,24 +93,22 @@ export default function TemporaryDrawer() {
       </Box>
     </div>
   );
-
+  const anchor = "right";
   return (
     <div>
-      {["right"].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>
-            {" "}
-            <MenuIcon></MenuIcon>
-          </Button>
-          <Drawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-          >
-            {list(anchor)}
-          </Drawer>
-        </React.Fragment>
-      ))}
+      <React.Fragment key={anchor}>
+        <Button onClick={toggleDrawer(anchor, true)}>
+          {" "}
+          <MenuIcon></MenuIcon>
+        </Button>
+        <Drawer
+          anchor={anchor}
+          open={state[anchor]}
+          onClose={toggleDrawer(anchor, false)}
+        >
+          {list(anchor)}
+        </Drawer>
+      </React.Fragment>
     </div>
   );
 }

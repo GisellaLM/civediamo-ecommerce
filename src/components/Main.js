@@ -20,12 +20,8 @@ export default function Main() {
       <Router>
         <Container maxWidth={false} disableGutters={true} style={{ margin: 0 }}>
           <Grid container>
-            {/*  <Grid item xs={12} sm={12} md={12} lg={12}>
-              <Header></Header>
-            </Grid> */}
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <MainImage></MainImage>
-              <SideBar />
             </Grid>
             <Grid item xs={12} md={12} lg={12}>
               <SectionOne></SectionOne>

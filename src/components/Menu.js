@@ -81,43 +81,11 @@ export default function Menu() {
           <NavLink to="contact" activeStyle smooth={true}>
             CONTACT US
           </NavLink>
-          {/*  <NavLink to="sign-up" activeStyle>
-            RESERVATION
-          </NavLink> */}
-          {/* Second Nav */}
-          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
         </NavMenu>
         <NavBtn>
           <NavBtnLink to="/signin">RESERVATION</NavBtnLink>
         </NavBtn>
       </Nav>
-      {/* <div className={classes.grow}>
-        <AppBar
-          color="transparent"
-          position="static"
-          className={classes.appBarMargin}
-        >
-          <Toolbar>
-            <div className={classes.grow}>
-              <Button className={classes.textButton} color="default">
-                Home
-              </Button>
-              <Button className={classes.textButton} color="inherit">
-                ABOUT US
-              </Button>
-              <Button className={classes.textButton} color="inherit">
-                BLOG
-              </Button>
-              <Button className={classes.textButton} color="inherit">
-                MENU
-              </Button>
-              <Button className={classes.textButton} color="inherit">
-                RESERVATION
-              </Button>
-            </div>
-          </Toolbar>
-        </AppBar>
-      </div> */}
     </>
   );
 }
