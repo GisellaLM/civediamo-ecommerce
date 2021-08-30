@@ -117,16 +117,7 @@ export default function SectionTwo() {
             <Box mt={5} mb={8}>
               <Grid container>
                 {data.map((item, index) => (
-                  <Grid
-                    item
-                    md={3}
-                    sm={6}
-                    xs={12}
-                    key={index}
-                    justifyContent="center"
-                    alignItems="center"
-                    alignContent="center"
-                  >
+                  <Grid item md={3} sm={6} xs={12} key={index}>
                     <div className={classes.boxCards}>
                       <Card className={classes.cardSize}>
                         <CardMedia

@@ -75,7 +75,7 @@ export default function Contact() {
         <Grid container className={classes.boxBackgroundFooter}>
           <Grid item md={4} sm={1} xs={1}></Grid>
           <Grid item md={4} sm={10} xs={10}>
-            <Grid container>
+            <Grid container alignItems="center">
               <Box className={classes.boxForm}>
                 <Grid item xs={12} sm={12}>
                   <Typography className={classes.contactUsText} align="center">
@@ -83,43 +83,49 @@ export default function Contact() {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sm={12}>
-                  <TextField
-                    required
-                    id="firstName"
-                    name="firstName"
-                    label="Name"
-                    fullWidth
-                    autoComplete="given-name"
-                    InputProps={{
-                      className: classes.fieldColor,
-                    }}
-                  />
+                  <Box p={2}>
+                    <TextField
+                      required
+                      id="firstName"
+                      name="firstName"
+                      label="Name"
+                      fullWidth
+                      autoComplete="given-name"
+                      InputProps={{
+                        className: classes.fieldColor,
+                      }}
+                    />
+                  </Box>
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField
-                    required
-                    id="email"
-                    name="email"
-                    label="E-mail"
-                    fullWidth
-                    autoComplete="family-name"
-                  />
+                  <Box p={2}>
+                    <TextField
+                      required
+                      id="email"
+                      name="email"
+                      label="E-mail"
+                      fullWidth
+                      autoComplete="family-name"
+                    />
+                  </Box>
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField
-                    required
-                    id="message1"
-                    name="message"
-                    label="Message"
-                    variant="outlined"
-                    fullWidth
-                    multiline
-                    rows={10}
-                    autoComplete="shipping address-line1"
-                  />
+                  <Box p={2}>
+                    <TextField
+                      required
+                      id="message1"
+                      name="message"
+                      label="Message"
+                      variant="outlined"
+                      fullWidth
+                      multiline
+                      rows={10}
+                      autoComplete="shipping address-line1"
+                    />
+                  </Box>
                 </Grid>
-                <Grid item lg={12} md={12} sm={12} xs={12} alignItems="center">
-                  <Box display="flex">
+                <Grid item lg={12} md={12} sm={12} xs={12}>
+                  <Box display="flex" p={2}>
                     <Button
                       type="submit"
                       variant="contained"

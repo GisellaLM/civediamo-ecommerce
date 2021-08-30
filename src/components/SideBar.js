@@ -80,7 +80,7 @@ export default function SideBar() {
         )}
       </List>
       <Divider />
-      <Box className={classes.boxSocialMedia}>
+      {/*  <Box className={classes.boxSocialMedia}>
         <img className={classes.logoImg} src={logo}></img>
         <Box>
           <IconButton className={classes.icon}>
@@ -105,7 +105,7 @@ export default function SideBar() {
             ></TwitterIcon>
           </IconButton>
         </Box>
-      </Box>
+      </Box> */}
     </div>
   );
   const anchor = "right";
