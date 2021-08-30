@@ -93,7 +93,7 @@ export default function SectionTwo() {
                     my whole heart.
                   </Typography>
                 </Box>
-                <Box display="flex" justifyContent="center">
+                <Box display="flex" justifyContent="flex-end">
                   <img className={classes.chefSign} src={Firma}></img>
                 </Box>
               </Grid>
@@ -101,7 +101,7 @@ export default function SectionTwo() {
             </Grid>
           </Grid>
           <Grid item xl={6} lg={6} md={6} xs={12} sm={12}>
-            <Box display="flex" justifyContent="center">
+            <Box display="flex" justifyContent="flex-end">
               <img className={classes.rotatePolaroidLeft} src={Polaroid1}></img>
               <img
                 className={classes.rotatePolaroidRight}
