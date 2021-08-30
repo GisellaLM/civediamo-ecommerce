@@ -65,6 +65,9 @@ const useStyles = makeStyles((theme) => ({
   textContactData: {
     paddingTop: "8px",
     paddingLeft: "8px",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "15px",
+    },
   },
 }));
 
