@@ -12,14 +12,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import logo from "../img/gorro.png";
 import SideBar from "./SideBar";
 
-import {
-  Nav,
-  NavLink,
-  Bars,
-  NavMenu,
-  NavBtn,
-  NavBtnLink,
-} from "./NavbarElements";
+import { Nav, NavLink, NavMenu, NavBtn, NavBtnLink } from "./NavbarElements";
 
 const useStyles = makeStyles((theme) => ({
   sectionDesktop: {
@@ -48,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   bars: {
     display: "none",
     color: "#fff",
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("sm")]: {
       display: "block",
       position: "absolute",
       top: "0",

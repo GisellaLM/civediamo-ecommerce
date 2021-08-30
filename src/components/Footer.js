@@ -10,10 +10,12 @@ import PlaceIcon from "@material-ui/icons/Place";
 import PhoneIcon from "@material-ui/icons/Phone";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, ListItem, Typography } from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 
 import logo from "../img/logo1.png";
+
+import List from "@material-ui/core/List";
 
 const useStyles = makeStyles((theme) => ({
   buttonStyle: {
@@ -55,6 +57,15 @@ const useStyles = makeStyles((theme) => ({
       bottom: "0px",
     }, */
   },
+  boxContactData: {
+    color: "#fff",
+    fontWeight: "bold",
+    marginTop: "20px",
+  },
+  textContactData: {
+    paddingTop: "8px",
+    paddingLeft: "8px",
+  },
 }));
 
 export default function Footer() {
@@ -91,29 +102,30 @@ export default function Footer() {
           </Box>
         </Grid>
         <Grid item xs={1} sm={1} md={4}></Grid>
-        <Grid item xs={5} sm={5} md={4} style={{ textAlign: "center" }}>
-          <Box display="block" justifyContent="center">
-            <Box display="inline-flex">
+        <Grid item xs={5} sm={5} md={4}>
+          <List className={classes.boxContactData}>
+            <ListItem>
               <PlaceIcon className={classes.icon} fontSize="large"></PlaceIcon>
-              <Typography paddingTop="8px">alskdjaklsdj</Typography>
-            </Box>
-            <Box>
-              <Box display="inline-flex">
-                <PhoneIcon
-                  className={classes.icon}
-                  fontSize="large"
-                ></PhoneIcon>
-                <Typography>+99 999 999</Typography>
-              </Box>
-            </Box>
-            <Box display="inline-flex">
+              <Typography className={classes.textContactData}>
+                Carrer de Pádua
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <PhoneIcon className={classes.icon} fontSize="large"></PhoneIcon>
+              <Typography className={classes.textContactData}>
+                +99 999 999
+              </Typography>
+            </ListItem>
+            <ListItem>
               <MailOutlineIcon
                 className={classes.icon}
                 fontSize="large"
               ></MailOutlineIcon>
-              <Typography>contact@civediamodomani.eu</Typography>
-            </Box>
-          </Box>
+              <Typography className={classes.textContactData}>
+                contact@civediamodomani.it
+              </Typography>
+            </ListItem>
+          </List>
         </Grid>
       </Grid>
     </>

@@ -19,7 +19,9 @@ import YouTubeIcon from "@material-ui/icons/YouTube";
 
 import logo from "../img/gorro.png";
 
-const useStyles = makeStyles({
+import { Link } from "react-scroll";
+
+const useStyles = makeStyles((theme) => ({
   list: {
     width: 250,
   },
@@ -29,19 +31,32 @@ const useStyles = makeStyles({
   logoImg: {
     height: "50px",
   },
-});
+  bars: {
+    display: "none",
+    color: "#fff",
+    [theme.breakpoints.between("400", "750")]: {
+      display: "block",
+      position: "absolute",
+      top: "0",
+      right: "0",
+      transform: "translate(-100%, 75%)",
+      fontSize: "1.8rem",
+      cursor: "pointer",
+    },
+  },
+}));
 
-export default function TemporaryDrawer() {
+export default function SideBar() {
   const classes = useStyles();
   const [state, setState] = React.useState({
     left: false,
     right: false,
   });
 
-  const peep = (tamaño, open) => {
-    const px = (event) => {};
-    return px;
-  };
+  // const peep = (tamaño, open) => {
+  //   const px = (event) => {};
+  //   return px;
+  // };
 
   const toggleDrawer = (anchor, open) => (event) => {
     setState({ ...state, [anchor]: open });
@@ -58,7 +73,7 @@ export default function TemporaryDrawer() {
       <List>
         {["About us", "Services", "Contact us", "Reservation"].map(
           (text, index) => (
-            <ListItem button key={text}>
+            <ListItem button component="a" key={text} to="about">
               <ListItemText primary={text} />
             </ListItem>
           )
@@ -97,8 +112,7 @@ export default function TemporaryDrawer() {
   return (
     <div>
       <React.Fragment key={anchor}>
-        <Button onClick={toggleDrawer(anchor, true)}>
-          {" "}
+        <Button onClick={toggleDrawer(anchor, true)} className={classes.bars}>
           <MenuIcon></MenuIcon>
         </Button>
         <Drawer
